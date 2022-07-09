@@ -1,4 +1,4 @@
-import { URLRepository } from '../../repositories/url-repository'
+import { URLRepository } from '@repositories/url-repository'
 
 interface ShortenUseCaseRequest {
   hash?: string

@@ -15,7 +15,11 @@
     "strict": false,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@middlewares/*": ["./src/middlewares/*"],
+      "@repositories/*": ["./src/repositories/*"],
+      "@use-cases/*": ["./src/use-cases/*"]
+    }
   },
   "include": ["src/**/*"]
 }

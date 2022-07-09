@@ -1,5 +1,5 @@
 import express from 'express'
-import { MongoConnection } from './repositories/mongo/mongo-connection'
+import { MongoConnection } from '@repositories/mongo/mongo-connection'
 import { shortenerRoutes } from './routes'
 
 require('dotenv/config')

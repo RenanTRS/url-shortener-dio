@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import shortId from 'shortid'
 
-import { MongoURLRepository } from '../../repositories/mongo/mongo-url-repository'
+import { MongoURLRepository } from '@repositories/mongo/mongo-url-repository'
 import { FindUseCase } from '../find-use-case'
 import { ShortenUseCase } from './shorten-use-case'
 

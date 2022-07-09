@@ -13,7 +13,9 @@ module.exports = {
     plugins: [
         ['module-resolver', {
             alias: {
-                //paths
+                '@middlewares': './src/middlewares',
+                '@repositories': './src/repositories',
+                '@use-cases': './src/use-cases'
             }
         }]
     ],

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 
-import { MongoURLRepository } from '../repositories/mongo/mongo-url-repository'
+import { MongoURLRepository } from '@repositories/mongo/mongo-url-repository'
 import { FindUseCase } from './find-use-case'
 
 export class RedirectController {
@@ -19,6 +19,6 @@ export class RedirectController {
       res.redirect(url.originURL)
       return
     }
-    res.status(400).json({ error: 'URL not found' })
+    res.status(400).json({ error: 'URL is not found' })
   }
 }
