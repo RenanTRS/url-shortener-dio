@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 
-import { MongoURLRepository } from '../repositories/mongo/mongo-url-repository'
+import { MongoURLRepository } from '@repositories/mongo/mongo-url-repository'
 import { FindUseCase } from './find-use-case'
 
 export class RedirectController {
