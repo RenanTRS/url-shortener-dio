@@ -19,6 +19,6 @@ export class RedirectController {
       res.redirect(url.originURL)
       return
     }
-    res.status(400).json({ error: 'URL not found' })
+    res.status(400).json({ error: 'URL is not found' })
   }
 }
