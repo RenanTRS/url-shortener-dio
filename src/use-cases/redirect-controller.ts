@@ -1,14 +1,20 @@
 import { Request, Response } from 'express'
-import { URLModel } from '../repositories/mongo/schema'
+
+import { MongoURLRepository } from '../repositories/mongo/mongo-url-repository'
+import { FindUseCase } from './find-use-case'
 
 export class RedirectController {
   async redirect(
     req: Request<{ short: string }>,
     res: Response
   ): Promise<void> {
-    const hash = req.params.short
+    const mongoURLRepositoy = new MongoURLRepository()
+    const findUseCase = new FindUseCase(mongoURLRepositoy)
 
-    const url = await URLModel.findOne({ hash })
+    const hash = req.params.short //get urlshort
+
+    //Check if it exists
+    const url = await findUseCase.excute({ hash }) //search a short url in database
     if (url) {
       res.redirect(url.originURL)
       return
